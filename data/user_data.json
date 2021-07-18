@@ -1,0 +1,37 @@
+{
+    "songs": [
+        {
+            "name": "song 1",
+            "artist": "artist 1",
+            "id": "1"
+        },
+        {
+            "name": "song 2",
+            "artist": "artist 2",
+            "id": "2",
+            "tags": [
+                "happy",
+                "bolly"
+            ]
+        },
+        {
+            "name": "song 3",
+            "artist": "artist 1",
+            "id": "3"
+        },
+        {
+            "name": "song 4",
+            "artist": "artist 1",
+            "id": "4",
+            "tags": [
+                "party",
+                "english"
+            ]
+        },
+        {
+            "name": "song 5",
+            "artist": "artist 3",
+            "id": "5"
+        }
+    ]
+}

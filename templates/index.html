@@ -1,0 +1,21 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{% block title %} Welcome to MyMusic {% endblock %}</h1>
+    <ul>
+       {% for data in songs_data['songs'] %}
+         <li>
+            <h4> name: {{data["name"]}} </h4>
+            <h8>artist: {{data['artist']}}</h8>
+            {% if data.get('tags') %}
+            <p>
+               {% for tag in data['tags'] %}
+                  <span style="color: blue;">{{tag}}</span>
+               {% endfor %}
+            </p>
+            {% endif %}
+         </li>
+       {% endfor %}
+    </ul>
+{% endblock %}
