@@ -1,0 +1,7 @@
+1. Structure the app
+    - define app features like music app
+    - artist, songs, playlist.
+
+2. add CRUD functionality to DB.
+3. filter the list with "tags".
+

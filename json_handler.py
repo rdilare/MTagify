@@ -7,6 +7,9 @@ class Songdb():
 		
 		self.loadData()
 
+	def __del__(self):
+		self.updateDB()
+
 	def loadData(self):
 		with open(self.filename) as f:
 			data = f.read()
@@ -61,3 +64,8 @@ class Songdb():
 						self.data['songs'][i]['tags'].append(tag)
 		self.updateDB()
 
+
+	def addSong(self,name,artist=None):
+		id = len(self.data)+1
+		self.data['songs'].append({"name":name,"artist":artist,"id":id})
+		self.updateDB()
