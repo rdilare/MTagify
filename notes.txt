@@ -3,5 +3,15 @@
     - artist, songs, playlist.
 
 2. add CRUD functionality to DB.
+    - arrange data with song-id
 3. filter the list with "tags".
 
+music playes library for js
+	- https://bestofjs.org/projects/amplitudejs  (downloaded in the myMusic app folder)
+		- docs: https://521dimensions.com/open-source/amplitudejs/docs
+    
+    - howler : https://www.npmjs.com/package/howler
+
+
+refs:
+- https://flashphoner.com/how-to-grab-a-video-from-youtube-and-share-it-via-webrtc-in-real-time/

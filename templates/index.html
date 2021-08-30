@@ -2,29 +2,43 @@
 
 {% block content %}
 <h1>{% block title %} Welcome to MyMusic {% endblock %}</h1>
-<div class="overflow-auto">
-   <ul id="songs">
-      {% for data in songs_data['songs'] %}
-      <li>
-         <h4> name: {{data["name"]}} </h4>
-         <h8>artist: {{data['artist']}}</h8>
-         {% if data.get('tags') %}
-         <p>
-            {% for tag in data['tags'] %}
-            <span style="color: blue;">{{tag}}</span>
+<div class="row">
+   <div class="col-4 h-50">
+      <h3>Playlist</h3>
+      <div class="overflow-auto" style="height:60vh">
+         <ul id="songs">
+            {% for data in songs_data['songs'] %}
+            <li>
+               <h4> name: {{data["name"]}} </h4>
+               <h8>artist: {{data['artist']}}</h8>
+               {% if data.get('tags') %}
+               <p>
+                  {% for tag in data['tags'] %}
+                  <span style="color: blue;">{{tag}}</span>
+                  {% endfor %}
+               </p>
+               {% endif %}
+            </li>
             {% endfor %}
-         </p>
-         {% endif %}
-      </li>
-      {% endfor %}
-   </ul>
-   <form action = "http://localhost:5000/addSong" method = "post">
-      <label for="text">Song Name</label><br>
-      <input type = "text" name = "name" /><br>
-      <label for="text">Artist</label><br>
-      <input type = "text" name = "artist" /><br>
-      <input type = "submit" value = "submit" />
-   </form> 
+         </ul>
+      </div>
+
+   </div>
+   <div class="col-4">
+      <form action="http://localhost:5000/addSong" method="post">
+         <label for="text">Song Name</label><br>
+         <input type="text" name="name" /><br>
+         <label for="text">Artist</label><br>
+         <input type="text" name="artist" /><br>
+         <input type="submit" value="submit" />
+      </form>
+      <div class="container" style="height: 50px;">
+         <h4 class"aligned">tu rang he mera</p>
+         <audio controls>
+            <source  src="http://localhost:8000/1" type="audio/mp3"/>
+         </audio>
+      </div>
+   </div>
 </div>
 
 {% endblock %}
