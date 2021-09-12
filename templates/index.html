@@ -3,20 +3,84 @@
 {% block content %}
 <div class="row container-fixed" style="margin-left: 5mm;">
    <div id="sidebar" class="col-2">
-      sidebar
+      <p>sidebar</p>
+
+      <div class="border"></div>
+      <div class="list-group">
+         <button class="list-group-item list-group-item-info d-flex justify-content-between align-items-center" data-toggle="modal" data-target="#addSongModal">Add New Song</button>
+         <button class="list-group-item list-group-item-info d-flex justify-content-between align-items-center" data-toggle="collapse" data-target="#tagsList1">Tags</button>
+         <div class="collapse" id="tagsList1">
+            <div class="list-group">
+               <button class="list-group-item d-flex justify-content-between align-items-center">tag 1<span
+                     class="badge badge-primary badge-pill">3</span></button>
+               <button class="list-group-item d-flex justify-content-between align-items-center">tag 2<span
+                     class="badge badge-primary badge-pill">345</span></button>
+               <button class="list-group-item d-flex justify-content-between align-items-center">tag 3<span
+                     class="badge badge-primary badge-pill">135</span></button>
+               <button class="list-group-item d-flex justify-content-between align-items-center">tag 4<span
+                     class="badge badge-primary badge-pill">76</span></button>
+            </div>
+         </div>
+         <button class="list-group-item list-group-item-info d-flex justify-content-between align-items-center" data-toggle="" data-target="#">Settings</button>
+      </div>
+
+
+
+      <!-- Modal -->
+      <div class="modal fade" id="addSongModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+         aria-hidden="true">
+         <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="addSongModalButton">Add a New Song</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                     <span aria-hidden="true">&times;</span>
+                  </button>
+               </div>
+               <div class="modal-body">
+                  <form class="needs-validation" novalidate>
+                     <div class="form-group">
+                        <label for="songname">Song Title</label>
+                        <input type="text" class="form-control" id="songname" placeholder="name of the song">
+                     </div>
+                     <div class="form-group">
+                        <label for="artistname">Artist</label>
+                        <input type="text" class="form-control" id="artistname" placeholder="name of the artist">
+                     </div>
+                     <div class="form-group">
+                        <label for="songurl">Song url</label>
+                        <input type="text" class="form-control" id="songurl" placeholder="url">
+                        <div class="invalid-feedback">
+                           url is invalid
+                        </div>
+                     </div>
+                     <div class="form-group">
+                        <label for="songtags">Add Tags</label>
+                        <textarea class="form-control" rows="2" id="songtags" placeholder="tags"></textarea>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Add</button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
    </div>
+
    <div class="col-10 ">
       <h3>Playlist</h3>
       <div class="overflow-auto" style="height:65vh">
-         <ul id="songs">
+         <ul class="list-group" id="songs">
             {% for data in songs_data['songs'] %}
-            <li>
-               <h4> name: {{data["name"]}} </h4>
+            <li class="list-group-item">
+               <h5> name: {{data["name"]}} </h4>
                <h8>artist: {{data['artist']}}</h8>
                {% if data.get('tags') %}
                <p>
                   {% for tag in data['tags'] %}
-                  <span style="color: blue;">{{tag}}</span>
+                  <span class="badge badge-secondary badge-pill" style="background-color:cornflowerblue;">{{tag}}</span>
                   {% endfor %}
                </p>
                {% endif %}
@@ -36,8 +100,8 @@
       </form>
    </div> -->
 </div>
-<div id="player" class="raw container">
-   <div class="container">
+<div id="player" class="raw container d-flex flex-raw-reverse">
+   <div class="container p-2">
       <p>song name</p>
       <audio controls>
          <source src="http://localhost:8000/1" type="audio/mp3" />
@@ -61,5 +125,8 @@
 
    </div>
 </div>
+
+<script src="static/js/form_validation.js"></script>
+
 
 {% endblock %}
