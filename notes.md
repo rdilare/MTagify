@@ -1,6 +1,9 @@
 1. Structure the app
-    - define app features like music app
-    - artist, songs, playlist.
+    - [x] define app's features like music app
+    - [ ] **add song streaming feature** (from youtube)
+    - [ ] add song UI
+      - [ ] if possible delete audio_controls.css file and related player UI
+    - [ ] modals in flask
 
 2. add CRUD functionality to DB.
     - arrange data with song-id

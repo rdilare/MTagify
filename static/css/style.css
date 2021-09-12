@@ -1,8 +1,9 @@
-h1 {
+#title {
+    top: 0;
     border: 2px #eee solid;
     color: brown;
     text-align: center;
-    padding: 10px;
+    align-items: center;
 }
 
 
@@ -39,3 +40,22 @@ h1 {
       background: #f8f8f8;
     }
   }
+
+#navbar {
+  height: 10vh;
+}
+
+#sidebar{
+  border: black;
+}
+
+#player {
+  color:burlywood;
+  height: 15vh;
+  width:auto;
+  position: absolute;
+  bottom: 0;
+  border: blue;
+  border-width: 10px;
+  color: aqua;
+}

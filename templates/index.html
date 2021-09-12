@@ -1,11 +1,13 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h1>{% block title %} Welcome to MyMusic {% endblock %}</h1>
-<div class="row">
-   <div class="col-4 h-50">
+<div class="row container-fixed" style="margin-left: 5mm;">
+   <div id="sidebar" class="col-2">
+      sidebar
+   </div>
+   <div class="col-10 ">
       <h3>Playlist</h3>
-      <div class="overflow-auto" style="height:60vh">
+      <div class="overflow-auto" style="height:65vh">
          <ul id="songs">
             {% for data in songs_data['songs'] %}
             <li>
@@ -24,7 +26,7 @@
       </div>
 
    </div>
-   <div class="col-4">
+   <!-- <div class="col-4">
       <form action="http://localhost:5000/addSong" method="post">
          <label for="text">Song Name</label><br>
          <input type="text" name="name" /><br>
@@ -32,12 +34,31 @@
          <input type="text" name="artist" /><br>
          <input type="submit" value="submit" />
       </form>
-      <div class="container" style="height: 50px;">
-         <h4 class"aligned">tu rang he mera</p>
-         <audio controls>
-            <source  src="http://localhost:8000/1" type="audio/mp3"/>
-         </audio>
+   </div> -->
+</div>
+<div id="player" class="raw container">
+   <div class="container">
+      <p>song name</p>
+      <audio controls>
+         <source src="http://localhost:8000/1" type="audio/mp3" />
+      </audio>
+
+      <div id="controls">
+         <span id="previous-btn"><i class="fa fa-step-backward fa-fw" aria-hidden="true"></i></span>
+         <span id="play-btn"><i class="fa fa-play fa-fw" aria-hidden="true"></i></span>
+         <span id="next-btn"><i class="fa fa-step-forward fa-fw" aria-hidden="true"></i></span>
       </div>
+      <div id="timeline">
+         <span id="current-time">--:--</span>
+         <span id="total-time">--:--</span>
+         <div class="slider" data-direction="horizontal">
+            <div class="progress">
+               <div class="pin" id="progress-pin" data-method="rewind"></div>
+            </div>
+         </div>
+      </div>
+
+
    </div>
 </div>
 

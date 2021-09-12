@@ -9,11 +9,12 @@
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
     <link rel="stylesheet" href="/static/css/bootstrap-4.5.min.css" >
     <link rel="stylesheet" href="/static/css/style.css" >
+    <link rel="stylesheet" href="/static/css/audio_controls.css" >
 
     <title>{% block title %} {% endblock %}</title>
   </head>
   <body>
-    <nav class="navbar navbar-expand-md navbar-light bg-light">
+    <nav id="navbar" class="navbar navbar-expand-md navbar-light bg-light">
         <a class="navbar-brand" href="{{ url_for('index')}}">MyMusic</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,7 +27,8 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
+
+    <div class="container-fixed" style="height: 80vh;">
         {% block content %} {% endblock %}
     </div>
 
