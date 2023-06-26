@@ -55,7 +55,7 @@ class JH:
             data_id = self.get_new_id()
             data.update({"id":data_id})
 
-        song_data = song_data_structure
+        song_data = song_data_structure.copy()
         song_data.update(data)
         self.data["songs"].update({str(data_id):song_data})
         # self.data["songs"].append({data})
@@ -63,8 +63,8 @@ class JH:
 
     def add_song(self, song_name, artist_name="unknown"):
         print(self.data,"\n")
-        song_data = {"name": song_name, "artist": artist_name}
-        self.add_data(song_data)
+        song_data_ = {"name": song_name, "artist": artist_name}
+        self.add_data(song_data_)
         print(self.data)
 
 
@@ -136,6 +136,7 @@ class JH:
 x = JH()
 print("\nbefore",x.get_data())
 x.add_song("song_1", "artist_1")
+x.add_song("song_2", "artist_2")
 # song = x.remove_by_id("2")
 # print("\nsong: ",song)
 print("after\n",x.get_data())
