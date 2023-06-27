@@ -37,7 +37,7 @@ class JH:
     def load(self):
         with open(self.db_filename,"r") as f:
             self.data = json.load(f)
-            print(f"data: {self.data}")
+            # print(f"data: {self.data}")
             self.prev_data = self.data
 
         with open(self.db_filename+".bak", "w") as f:
@@ -87,8 +87,8 @@ class JH:
             self.save_to_file()
         return song
 
-    def get_data(self):
-        return self.data
+    def get_songs(self):
+        return self.data["songs"]
 
     def get_new_id(self):
         return len(self.data["songs"].keys())
@@ -142,23 +142,24 @@ def file_to_data(filename, data_handler):
             data_handler.add_song(line.strip())
             
 
-x = JH()
-'''
-print("\nbefore",x.get_data())
-x.add_song("song_1", "artist_1")
-x.add_song("song_2", "artist_2")
-# song = x.remove_by_id("2")
-# print("\nsong: ",song)
-print("after\n",x.get_data())
-
-'''
-x.print_songs()
 
 
-'''
-if len(sys.argv)<2:
-    raise Exception("provide filename")
-filename = sys.argv[1]
-print(filename)
-file_to_data(filename, x)
-'''
+if __name__=="__main__":
+    x = JH()
+    '''
+    x.add_song("song_1", "artist_1")
+    x.add_song("song_2", "artist_2")
+    # song = x.remove_by_id("2")
+    # print("\nsong: ",song)
+
+    '''
+    x.print_songs()
+
+
+    '''
+    if len(sys.argv)<2:
+        raise Exception("provide filename")
+    filename = sys.argv[1]
+    print(filename)
+    file_to_data(filename, x)
+    '''
