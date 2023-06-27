@@ -1,4 +1,5 @@
 import json
+import sys
 
 
 template = {
@@ -62,10 +63,10 @@ class JH:
         self.save_to_file()
 
     def add_song(self, song_name, artist_name="unknown"):
-        print(self.data,"\n")
+        # print(self.data,"\n")
         song_data_ = {"name": song_name, "artist": artist_name}
         self.add_data(song_data_)
-        print(self.data)
+        # print(self.data)
 
 
     def add_tags(self, tags=[]):
@@ -133,7 +134,16 @@ class JH:
             print(f"id \t: {song_data['id']}\n")
 
 
+
+def file_to_data(filename, data_handler):
+    with open(filename,"r") as f:
+        for line in f:
+            print(f">> {line}")
+            data_handler.add_song(line.strip())
+            
+
 x = JH()
+'''
 print("\nbefore",x.get_data())
 x.add_song("song_1", "artist_1")
 x.add_song("song_2", "artist_2")
@@ -141,4 +151,14 @@ x.add_song("song_2", "artist_2")
 # print("\nsong: ",song)
 print("after\n",x.get_data())
 
+'''
 x.print_songs()
+
+
+'''
+if len(sys.argv)<2:
+    raise Exception("provide filename")
+filename = sys.argv[1]
+print(filename)
+file_to_data(filename, x)
+'''

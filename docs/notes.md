@@ -14,6 +14,13 @@
 
 
 
+## polulate database (data.json)
+
+```shell
+yt-dlp --flat-playlist --get-title https://www.youtube.com/playlist?list=PLre0jYOVfwT1Dk0WwcZB9klTFSS0HxpLu > soft_songs.txt
+```
+
+
 music playes library for js
 	- https://bestofjs.org/projects/amplitudejs  (downloaded in the myMusic app folder)
 		- docs: https://521dimensions.com/open-source/amplitudejs/docs
