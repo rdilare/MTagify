@@ -14,6 +14,10 @@ template = {
       "artist": "artist_2",
       "id": 0
     }
+  },
+  "tags_map": {
+      "tag1":0,
+      "tag2":0,
   }
 }
 
@@ -73,8 +77,12 @@ class JH:
         song_data = self.data["songs"][str(song_id)]
         print(f"[debug]: {song_data}")
         for tag in tags:
+            if not tag in self.data["tags_map"].keys():
+                self.data["tags_map"].update({str(tag):0})
+
             if not tag in song_data["tags"]:
                 self.data["songs"][str(song_id)]["tags"].append(str(tag))
+                self.data["tags_map"][str(tag)]+=1
         print(f"[debug]: {song_data}")
 
         self.save_to_file()
@@ -92,6 +100,14 @@ class JH:
             song = self.data.pop(song_id)
             self.save_to_file()
         return song
+    
+    def remove_tags_from_song(self, song_id, tags):
+        for tag in tags:
+            song_data = self.data["songs"][str(song_id)]
+            if tag in song_data["tags"]:
+                song_data["tags"].remove(tag)
+                self.data["tags_map"][tag]-=1
+        self.save_to_file()
 
     def get_songs(self):
         return self.data["songs"]
@@ -133,13 +149,19 @@ class JH:
 
     def create_file(self):
         is_data = True
-        with open(self.db_filename,"r") as f:
-            data = f.read()
-            if not data:
-                is_data = False
+        try:
+            with open(self.db_filename,"r") as f:
+                data = f.read()
+                if not data:
+                    is_data = False
+        except FileNotFoundError:
+            print("not file as data.json. creating file")
+            is_data = False
+
         with open(self.db_filename,"a") as f:
             if not is_data:
-                template = {"songs": {"id": {"name" : "None", "artist":"None", "id":"None"}}} 
+                # template = {"songs": {"id": {"name" : "None", "artist":"None", "id":"None"}}} 
+                template = {"songs": {"id": song_data_structure}, "tags_map":{}} 
                 # template = {}           
                 json.dump(template, f, indent=2)
                 print("creating file: data.json")
@@ -174,13 +196,15 @@ def __del__(self):
 if __name__=="__main__":
     x = JH()    
     # x.print_songs()
-    # x.add_tags(0,["happy", "inspiration", "sad"])
-    # x.add_tags(1,["sad", "hopeless"])
+    x.add_tags(0,["happy", "inspiration", "sad"])
+    x.add_tags(1,["sad", "hopeless"])
 
     song_list = x.get_songs_with_tags(included_tags=["happy", "sad"], excluded_tags=["inspiration"])
 
     for song_data in song_list:
         print(f"{song_data}\n")
+
+    x.remove_tags_from_song(0,["sad"])
 
     '''
     x.add_song("song_1", "artist_1")

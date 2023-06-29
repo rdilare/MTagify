@@ -6,8 +6,7 @@
       "id": 0,
       "tags": [
         "happy",
-        "inspiration",
-        "sad"
+        "inspiration"
       ]
     },
     "1": {
@@ -967,5 +966,11 @@
       "id": 159,
       "tags": []
     }
+  },
+  "tags_map": {
+    "happy": 1,
+    "inspiration": 1,
+    "sad": 1,
+    "hopeless": 1
   }
 }
