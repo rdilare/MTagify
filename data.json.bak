@@ -4,13 +4,20 @@
       "name": "\"Kyun Main Jaagoon\" Full Song Patiala House | Akshay Kumar",
       "artist": "unknown",
       "id": 0,
-      "tags": []
+      "tags": [
+        "happy",
+        "inspiration",
+        "sad"
+      ]
     },
     "1": {
       "name": "Jaane De",
       "artist": "unknown",
       "id": 1,
-      "tags": []
+      "tags": [
+        "sad",
+        "hopeless"
+      ]
     },
     "2": {
       "name": "AAOGE JAB TUM",

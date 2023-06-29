@@ -69,9 +69,15 @@ class JH:
         # print(self.data)
 
 
-    def add_tags(self, tags=[]):
-        if not tags:
-            return
+    def add_tags(self, song_id, tags=[]):
+        song_data = self.data["songs"][str(song_id)]
+        print(f"[debug]: {song_data}")
+        for tag in tags:
+            if not tag in song_data["tags"]:
+                self.data["songs"][str(song_id)]["tags"].append(str(tag))
+        print(f"[debug]: {song_data}")
+
+        self.save_to_file()
     
     def add_field(self, field, value):
         for key in self.data["songs"].keys():
@@ -89,6 +95,23 @@ class JH:
 
     def get_songs(self):
         return self.data["songs"]
+    
+    def get_songs_with_tags(self, included_tags=[], excluded_tags=[]):
+        song_list = []
+        for song_data in self.data["songs"].values():
+            should_add = False
+            for tag in included_tags:
+                if tag in song_data["tags"]:
+                    should_add = True
+                    break
+            for tag in excluded_tags:
+                if tag in song_data["tags"]:
+                    should_add = False
+                    break
+            if should_add:
+                song_list.append(song_data)
+        return song_list
+
 
     def get_new_id(self):
         return len(self.data["songs"].keys())
@@ -140,12 +163,25 @@ def file_to_data(filename, data_handler):
         for line in f:
             print(f">> {line}")
             data_handler.add_song(line.strip())
+
+def __del__(self):
+    print("destructor called")
+    self.save_to_file()
             
 
 
 
 if __name__=="__main__":
-    x = JH()
+    x = JH()    
+    # x.print_songs()
+    # x.add_tags(0,["happy", "inspiration", "sad"])
+    # x.add_tags(1,["sad", "hopeless"])
+
+    song_list = x.get_songs_with_tags(included_tags=["happy", "sad"], excluded_tags=["inspiration"])
+
+    for song_data in song_list:
+        print(f"{song_data}\n")
+
     '''
     x.add_song("song_1", "artist_1")
     x.add_song("song_2", "artist_2")
@@ -153,7 +189,7 @@ if __name__=="__main__":
     # print("\nsong: ",song)
 
     '''
-    x.print_songs()
+    # x.print_songs()
 
 
     '''
