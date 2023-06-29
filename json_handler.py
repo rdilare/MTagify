@@ -112,6 +112,9 @@ class JH:
     def get_songs(self):
         return self.data["songs"]
     
+    def get_tags(self):
+        return self.data["tags_map"].keys()
+    
     def get_songs_with_tags(self, included_tags=[], excluded_tags=[]):
         song_list = []
         for song_data in self.data["songs"].values():
