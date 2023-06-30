@@ -1,5 +1,6 @@
 from InquirerPy import prompt
 from InquirerPy import inquirer
+from InquirerPy.separator import Separator
 from InquirerPy.base.control import Choice
 from functools import partial
 import copy
@@ -34,33 +35,55 @@ class Tui:
         self.excluded_tags = []
         self.data_handler = JH()
         self.actions_dict = {
-                    "Search" : self.searchSong,
                     "Include Tags" : self.includeTags,
                     "Exclude Tags" : self.excludeTags,
+                    "View Song Info": self.viewSongInfo,
+                    "Add Tags to Song" : self.addTagsToSong,
                     "Exit" : self.quit
         }
 
     def listSongs(self):
         # songs = self.data_handler.get_songs()
-        print(f"self.included_tags: {self.included_tags}")
+        # print(f"self.included_tags: {self.included_tags}")
         songs = self.data_handler.get_songs_with_tags(self.included_tags, self.excluded_tags)
 
-        print(f"___songs_list______________________________________")
+        print(f"\n____________________Song List____________________")
         for item in idWithName(songs)[:10]:
             print(item)
-        print(f"___________________________________________________\n")
+        print(f"_________________________________________________\n")
+        print(f"Included Tags: {self.included_tags}\t Excluded Tags: {self.excluded_tags}")
+        # print(f".................................................")
 
     
-    def searchSong(self):
+    def addTagsToSong(self):
         song = inquirer.fuzzy(
-        message="Select Song:",
-        choices=idWithName(self.data_handler.get_songs().values()),
-        default="",
-        ).execute()
+                message="Select Song: ",
+                choices=idWithName(self.data_handler.get_songs().values()),
+                default="",
+                ).execute()
 
         song_id = getId(song)
 
-        print(self.data_handler.get_songs()[str(song_id)])
+        tags_in_song = self.data_handler.get_songs()[str(song_id)]["tags"]
+
+        print(f"Current Tags: {tags_in_song}")
+
+        tags = inquirer.select(
+                message = "Tags : ",
+                choices = list(self.data_handler.get_tags())  +[Separator(),"Add New Tag"],
+                multiselect = True
+                ).execute()
+        
+        if "Add New Tag" in tags:
+            new_tag = inquirer.text(
+                message = "New Tag: ",
+            ).execute()
+
+            tags.remove("Add New Tag")
+            tags.append(new_tag)
+
+        self.data_handler.add_tags(str(song_id), tags)
+        print("[debug]: ",self.data_handler.get_songs()[str(song_id)])
         
     def includeTags(self):
         tags = inquirer.checkbox(
@@ -83,6 +106,20 @@ class Tui:
             # instruction="(select at least 1)",
         ).execute()
         self.excluded_tags = tags
+
+    def viewSongInfo(self):
+        song = inquirer.fuzzy(
+                message="Select Song: ",
+                choices=idWithName(self.data_handler.get_songs().values()),
+                default="",
+                ).execute()
+
+        song_id = getId(song)
+
+        song_data = self.data_handler.get_songs()[str(song_id)]
+        print(f"Song: {song_data['name']}")
+        print(f"Artist: {song_data['artist']}")
+        print(f"Tags: {song_data['tags']}")
 
     def quit(self):
         return "exit"

@@ -75,7 +75,7 @@ class JH:
 
     def add_tags(self, song_id, tags=[]):
         song_data = self.data["songs"][str(song_id)]
-        print(f"[debug]: {song_data}")
+        # print(f"[debug]: {song_data}")
         for tag in tags:
             if not tag in self.data["tags_map"].keys():
                 self.data["tags_map"].update({str(tag):0})
@@ -83,7 +83,7 @@ class JH:
             if not tag in song_data["tags"]:
                 self.data["songs"][str(song_id)]["tags"].append(str(tag))
                 self.data["tags_map"][str(tag)]+=1
-        print(f"[debug]: {song_data}")
+        # print(f"[debug]: {song_data}")
 
         self.save_to_file()
     
