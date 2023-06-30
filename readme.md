@@ -1,4 +1,4 @@
-# myMusic [MTagify]
+# MTagify
 
 Filter and List the songs from a database (json format) according to tags.
 
