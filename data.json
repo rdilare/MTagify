@@ -5,8 +5,6 @@
       "artist": "unknown",
       "id": 0,
       "tags": [
-        "happy",
-        "inspiration",
         "sad"
       ]
     },
@@ -979,8 +977,8 @@
     }
   },
   "tags_map": {
-    "happy": 2,
-    "inspiration": 1,
+    "happy": 1,
+    "inspiration": 0,
     "sad": 2,
     "hopeless": 1,
     "ghazal": 1,

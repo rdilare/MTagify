@@ -39,6 +39,7 @@ class Tui:
                     "Exclude Tags" : self.excludeTags,
                     "View Song Info": self.viewSongInfo,
                     "Add Tags to Song" : self.addTagsToSong,
+                    "Remove Tags From Song" : self.removeTagsFromSong,
                     "Exit" : self.quit
         }
 
@@ -84,6 +85,29 @@ class Tui:
 
         self.data_handler.add_tags(str(song_id), tags)
         print("[debug]: ",self.data_handler.get_songs()[str(song_id)])
+
+
+    def removeTagsFromSong(self):
+        song = inquirer.fuzzy(
+                message="Select Song: ",
+                choices=idWithName(self.data_handler.get_songs().values()),
+                default="",
+                ).execute()
+
+        song_id = getId(song)
+        tags_in_song = self.data_handler.get_songs()[str(song_id)]["tags"]
+        print(f"Current Tags: {tags_in_song}")
+
+        tags = inquirer.select(
+                message = "Tags to Remove: ",
+                choices = tags_in_song,
+                multiselect = True
+                ).execute()
+
+        self.data_handler.remove_tags_from_song(str(song_id), tags)
+        print("[debug]: ",self.data_handler.get_songs()[str(song_id)])
+
+
         
     def includeTags(self):
         tags = inquirer.checkbox(
