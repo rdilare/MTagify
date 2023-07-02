@@ -50,8 +50,7 @@
       "id": 6,
       "tags": [
         "punjabi",
-        "romantic",
-        "happy"
+        "romantic"
       ]
     },
     "7": {
@@ -977,7 +976,7 @@
     }
   },
   "tags_map": {
-    "happy": 1,
+    "happy": 0,
     "inspiration": 0,
     "sad": 2,
     "hopeless": 1,
