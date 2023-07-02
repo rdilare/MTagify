@@ -57,7 +57,7 @@ class Tui:
         songs = self.data_handler.get_songs_with_tags(self.included_tags, self.excluded_tags)
 
         print(f"\n____________________Song List____________________")
-        for item in idWithName(songs)[:10]:
+        for item in idWithName(songs):
             print(truncString(item, self.max_string_length))
         print(f"_________________________________________________\n")
         print(f"Included Tags: {self.included_tags}\t Excluded Tags: {self.excluded_tags}")

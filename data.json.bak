@@ -5,7 +5,8 @@
       "artist": "unknown",
       "id": 0,
       "tags": [
-        "sad"
+        "sad",
+        "hindi"
       ]
     },
     "1": {
@@ -23,26 +24,40 @@
       "id": 2,
       "tags": [
         "sad",
-        "ghazal"
+        "ghazal",
+        "hopeless",
+        "hindi"
       ]
     },
     "3": {
       "name": "Yeh Mera Deewanapan hai - Ali Sethi | Aesthetics \u0627\u0631\u062f\u0648",
       "artist": "unknown",
       "id": 3,
-      "tags": []
+      "tags": [
+        "ghazal",
+        "romantic",
+        "hindi"
+      ]
     },
     "4": {
       "name": "Chan Kithan",
       "artist": "unknown",
       "id": 4,
-      "tags": []
+      "tags": [
+        "sad",
+        "punjabi",
+        "soft"
+      ]
     },
     "5": {
       "name": "Jaane De - Full Video | Atif Aslam | Qarib Qarib Singlle | Irrfan I Parvathy | Vishal Mishra",
       "artist": "unknown",
       "id": 5,
-      "tags": []
+      "tags": [
+        "sad",
+        "hopeless",
+        "soft"
+      ]
     },
     "6": {
       "name": "Jhanjra",
@@ -50,50 +65,75 @@
       "id": 6,
       "tags": [
         "punjabi",
-        "romantic"
+        "romantic",
+        "happy"
       ]
     },
     "7": {
       "name": "Baari",
       "artist": "unknown",
       "id": 7,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic",
+        "soft"
+      ]
     },
     "8": {
       "name": "Akh Kashni | Cover by Noor Chahal | Surinder Kaur",
       "artist": "unknown",
       "id": 8,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic"
+      ]
     },
     "9": {
       "name": "Bhij Gayi Kurti Lal | Harbhajan Mann | Cover by Noor Chahal",
       "artist": "unknown",
       "id": 9,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi",
+        "romantic"
+      ]
     },
     "10": {
       "name": "Meri Jhanjar | Devinder Dharia | Cover by Noor Chahal",
       "artist": "unknown",
       "id": 10,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi",
+        "romantic"
+      ]
     },
     "11": {
       "name": "Laung Gwacha | Cover by Noor Chahal",
       "artist": "unknown",
       "id": 11,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi"
+      ]
     },
     "12": {
       "name": "Devinder Dharia - The Yamla Medley",
       "artist": "unknown",
       "id": 12,
-      "tags": []
+      "tags": [
+        "punjabi"
+      ]
     },
     "13": {
       "name": "Heerey (Full Song) - Amrinder Gill | Love Punjab | Releasing on 11th March",
       "artist": "unknown",
       "id": 13,
-      "tags": []
+      "tags": [
+        "soft",
+        "punjabi",
+        "romantic"
+      ]
     },
     "14": {
       "name": "Teriyaan Deedaan (Official Video) | Parmish Verma | Prabh Gill | Desi Crew | Dil Diyan Gallan",
@@ -101,224 +141,359 @@
       "id": 14,
       "tags": [
         "punjabi",
-        "romantic"
+        "romantic",
+        "soft"
       ]
     },
     "15": {
       "name": "Full Song: KHAIRIYAT (BONUS TRACK) | CHHICHHORE | Sushant, Shraddha | Pritam, Amitabh B|Arijit Singh",
       "artist": "unknown",
       "id": 15,
-      "tags": []
+      "tags": [
+        "soft",
+        "romantic",
+        "hindi"
+      ]
     },
     "16": {
       "name": "Rabb Wangu",
       "artist": "unknown",
       "id": 16,
-      "tags": []
+      "tags": [
+        "romantic",
+        "soft",
+        "punjabi"
+      ]
     },
     "17": {
       "name": "\"Ambarsariya Fukrey\" Song By Sona Mohapatra | Pulkit Samrat, Priya Anand",
       "artist": "unknown",
       "id": 17,
-      "tags": []
+      "tags": [
+        "romantic",
+        "happy",
+        "punjabi"
+      ]
     },
     "18": {
       "name": "Lyrical : Nain Na Jodeen | Badhaai Ho | Ayushmann Khurrana| Sanya Malhotra|Rochak Kohli| Neha Kakkar",
       "artist": "unknown",
       "id": 18,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft",
+        "hindi"
+      ]
     },
     "19": {
       "name": "Dil Main Nahi Laona | Maninder Buttar | Mix Singh | Laiye Je Yaarian",
       "artist": "unknown",
       "id": 19,
-      "tags": []
+      "tags": [
+        "sad",
+        "punjabi"
+      ]
     },
     "20": {
       "name": "Rag'n'Bone Man - As You Are (Official Video)",
       "artist": "unknown",
       "id": 20,
-      "tags": []
+      "tags": [
+        "inspiration",
+        "soft",
+        "english"
+      ]
     },
     "21": {
       "name": "Rag'n'Bone Man - Die Easy (Official Audio)",
       "artist": "unknown",
       "id": 21,
-      "tags": []
+      "tags": [
+        "english"
+      ]
     },
     "22": {
       "name": "Hal David and John Cacavas  - In French The Words Are Beautiful",
       "artist": "unknown",
       "id": 22,
-      "tags": []
+      "tags": [
+        "romantic",
+        "soft",
+        "english"
+      ]
     },
     "23": {
       "name": "Coke Studio Season 12 | Gulon Main Rang | Ali Sethi",
       "artist": "unknown",
       "id": 23,
-      "tags": []
+      "tags": [
+        "happy",
+        "ghazal",
+        "romantic",
+        "soft",
+        "hindi"
+      ]
     },
     "24": {
       "name": "Baage Vich",
       "artist": "unknown",
       "id": 24,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi",
+        "romantic",
+        "soft"
+      ]
     },
     "25": {
       "name": "Tu Meri Rani",
       "artist": "unknown",
       "id": 25,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi",
+        "romantic"
+      ]
     },
     "26": {
       "name": "Vaaroon",
       "artist": "unknown",
       "id": 26,
-      "tags": []
+      "tags": [
+        "romantic",
+        "soft",
+        "hindi"
+      ]
     },
     "27": {
       "name": "Lyrical:  Ik Bagal Song | Gangs Of Wasseypur | Manoj Bajpai, Piyush Mishra",
       "artist": "unknown",
       "id": 27,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft",
+        "hindi"
+      ]
     },
     "28": {
       "name": "Tu Mera Raazi",
       "artist": "unknown",
       "id": 28,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft",
+        "hindi"
+      ]
     },
     "29": {
       "name": "Allah Ke Bande",
       "artist": "unknown",
       "id": 29,
-      "tags": []
+      "tags": [
+        "inspiration",
+        "hindi"
+      ]
     },
     "30": {
       "name": "Teri Deewani",
       "artist": "unknown",
       "id": 30,
-      "tags": []
+      "tags": [
+        "romantic",
+        "hindi"
+      ]
     },
     "31": {
       "name": "Tere Bin Sanu Soniya (Acoustic)",
       "artist": "unknown",
       "id": 31,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic"
+      ]
     },
     "32": {
       "name": "Be the Man",
       "artist": "unknown",
       "id": 32,
-      "tags": []
+      "tags": [
+        "english"
+      ]
     },
     "33": {
       "name": "Innocent Man",
       "artist": "unknown",
       "id": 33,
-      "tags": []
+      "tags": [
+        "soft",
+        "english"
+      ]
     },
     "34": {
       "name": "Your Way or the Rope",
       "artist": "unknown",
       "id": 34,
-      "tags": []
+      "tags": [
+        "english"
+      ]
     },
     "35": {
       "name": "Awaaz",
       "artist": "unknown",
       "id": 35,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic",
+        "soft"
+      ]
     },
     "36": {
       "name": "Teri Khaamiyan\u00a0(Official Video) | AKHIL | Jaani | B Praak |\u00a0Latest Songs 2018 | New Songs 2018",
       "artist": "unknown",
       "id": 36,
-      "tags": []
+      "tags": [
+        "sad",
+        "punjabi",
+        "soft"
+      ]
     },
     "37": {
       "name": "\"Tu Na Jaane Aas Paas Hai Khuda\" Full HD Song | Anjaana Anjaani | Priyanka Chopra, Ranbir Kapoor",
       "artist": "unknown",
       "id": 37,
-      "tags": []
+      "tags": [
+        "inspiration",
+        "soft",
+        "hindi"
+      ]
     },
     "38": {
       "name": "Gori Teri Aankhen | Lucky Ali | Unacademy Unwind With MTV",
       "artist": "unknown",
       "id": 38,
-      "tags": []
+      "tags": [
+        "romantic",
+        "soft",
+        "hindi"
+      ]
     },
     "39": {
       "name": "'Zindagi Kuch Toh Bata (Reprise)' Song Pritam | Salman & Kareena  | Bajrangi Bhaijaan | Jubin",
       "artist": "unknown",
       "id": 39,
-      "tags": []
+      "tags": [
+        "happy",
+        "soft",
+        "hindi"
+      ]
     },
     "40": {
-      "name": "KINNA SONA",
+      "name": "KINNA SONA - Bhaag Johny",
       "artist": "unknown",
       "id": 40,
-      "tags": []
+      "tags": [
+        "hindi",
+        "romantic",
+        "soft"
+      ]
     },
     "41": {
       "name": "KUCH KHAAS Lyrical | Fashion | Priyanka Chopra, Kangna Ranawat | Mohit Chauhan, Neha Bhasin",
       "artist": "unknown",
       "id": 41,
-      "tags": []
+      "tags": [
+        "hindi"
+      ]
     },
     "42": {
       "name": "The PropheC - Kina Chir | Official Video | Latest Punjabi Songs",
       "artist": "unknown",
       "id": 42,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic",
+        "soft"
+      ]
     },
     "43": {
       "name": "Akhiyan | Jatt & Juliet 2 | Diljit Dosanjh | Full Official Music Video | Releasing 28 June 2013",
       "artist": "unknown",
       "id": 43,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic",
+        "soft"
+      ]
     },
     "44": {
       "name": "Dil Ibaadat Full Video - Tum Mile|Emraan Hashmi,Soha Ali Khan|Pritam|KK|Sayeed Quadri",
       "artist": "unknown",
       "id": 44,
-      "tags": []
+      "tags": [
+        "happy",
+        "romantic",
+        "soft",
+        "hindi"
+      ]
     },
     "45": {
       "name": "Sapna Jahan (From \"Brothers\")",
       "artist": "unknown",
       "id": 45,
-      "tags": []
+      "tags": [
+        "sad",
+        "hopeless",
+        "soft",
+        "hindi"
+      ]
     },
     "46": {
       "name": "Phir Le Aya Dil (Reprise)",
       "artist": "unknown",
       "id": 46,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft",
+        "hindi"
+      ]
     },
     "47": {
       "name": "Choti Choti Gal",
       "artist": "unknown",
       "id": 47,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft",
+        "hindi"
+      ]
     },
     "48": {
       "name": "Mera Yaar Lyric Video - Bhaag Milkha Bhaag|Farhan Akhtar, Sonam Kapoor|Javed Bashir",
       "artist": "unknown",
       "id": 48,
-      "tags": []
+      "tags": [
+        "happy",
+        "punjabi",
+        "romantic"
+      ]
     },
     "49": {
       "name": "Yanky - Desi | duet song | Ramneek Simrita",
       "artist": "unknown",
       "id": 49,
-      "tags": []
+      "tags": [
+        "punjabi",
+        "romantic"
+      ]
     },
     "50": {
       "name": "Bella Ciao - La Casa de Papel",
       "artist": "unknown",
       "id": 50,
-      "tags": []
+      "tags": [
+        "sad",
+        "soft"
+      ]
     },
     "51": {
       "name": "\"Suno Na Sangemarmar\" Full Song with Lyrics | Youngistaan | Jackky Bhagnani, Neha Sharma",
@@ -976,12 +1151,15 @@
     }
   },
   "tags_map": {
-    "happy": 0,
-    "inspiration": 0,
-    "sad": 2,
-    "hopeless": 1,
-    "ghazal": 1,
-    "punjabi": 2,
-    "romantic": 2
+    "happy": 11,
+    "inspiration": 3,
+    "sad": 13,
+    "hopeless": 4,
+    "ghazal": 3,
+    "punjabi": 23,
+    "romantic": 26,
+    "soft": 29,
+    "hindi": 19,
+    "english": 6
   }
 }

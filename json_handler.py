@@ -199,17 +199,18 @@ def __del__(self):
 if __name__=="__main__":
     x = JH()    
     # x.print_songs()
-    x.add_tags(0,["happy", "inspiration", "sad"])
+    x.add_tags(0,["hindi","sad"])
     x.add_tags(1,["sad", "hopeless"])
+    x.add_tags(2,["sad", "hopeless", "hindi"])
 
     song_list = x.get_songs_with_tags(included_tags=["happy", "sad"], excluded_tags=["inspiration"])
 
     for song_data in song_list:
         print(f"{song_data}\n")
 
-    x.remove_tags_from_song(0,["sad"])
 
     '''
+    x.remove_tags_from_song(0,["sad"])
     x.add_song("song_1", "artist_1")
     x.add_song("song_2", "artist_2")
     # song = x.remove_by_id("2")
